@@ -1,0 +1,59 @@
+{
+  "schemaName": "sentiments_rt",
+  "dimensionFieldSpecs": [
+    {
+      "name": "message_id",
+      "dataType": "STRING"
+    },
+    {
+      "name": "customer_id",
+      "dataType": "STRING"
+    },
+    {
+      "name": "customer_name",
+      "dataType": "STRING"
+    },
+    {
+      "name": "model_used",
+      "dataType": "STRING"
+    },
+    {
+      "name": "sentiment_category",
+      "dataType": "STRING"
+    },
+    {
+      "name": "ip_country",
+      "dataType": "STRING"
+    },
+    {
+      "name": "message_text",
+      "dataType": "STRING"
+    },
+    {
+      "name": "source_partition",
+      "dataType": "INT"
+    },
+    {
+      "name": "source_offset",
+      "dataType": "LONG"
+    },
+    {
+      "name": "processing_timestamp",
+      "dataType": "STRING"
+    }
+  ],
+  "metricFieldSpecs": [
+    {
+      "name": "sentiment_score",
+      "dataType": "DOUBLE"
+    }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "message_timestamp",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ]
+} 

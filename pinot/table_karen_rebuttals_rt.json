@@ -1,0 +1,36 @@
+{
+  "tableName": "karen_rebuttals_rt",
+  "tableType": "REALTIME",
+  "segmentsConfig": {
+    "timeColumnName": "generated_timestamp",
+    "timeType": "MILLISECONDS",
+    "replication": "1",
+    "schemaName": "karen_rebuttals_rt"
+  },
+  "tenants": {
+    "broker": "DefaultTenant",
+    "server": "DefaultTenant"
+  },
+  "tableIndexConfig": {
+    "loadMode": "MMAP",
+    "invertedIndexColumns": [
+      "customer_id",
+      "customer_name",
+      "rebuttal_model"
+    ],
+    "streamConfigs": {
+      "streamType": "kafka",
+      "stream.kafka.topic.name": "karen_rebuttals",
+      "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.inputformat.json.JSONMessageDecoder",
+      "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka20.KafkaConsumerFactory",
+      "stream.kafka.broker.list": "redpanda:9092",
+      "realtime.segment.flush.threshold.rows": "0",
+      "realtime.segment.flush.threshold.time": "24h",
+      "realtime.segment.flush.threshold.segment.size": "50M",
+      "stream.kafka.consumer.prop.auto.offset.reset": "smallest"
+    }
+  },
+  "metadata": {
+    "customConfigs": {}
+  }
+}

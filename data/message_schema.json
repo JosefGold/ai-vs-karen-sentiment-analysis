@@ -1,0 +1,61 @@
+{
+  "schema": {
+    "name": "customer_message",
+    "version": "1.0",
+    "description": "E-commerce customer service chat message schema",
+    "fields": [
+      {
+        "name": "message_id",
+        "type": "string",
+        "description": "Unique UUID identifier for the message",
+        "example": "550e8400-e29b-41d4-a716-446655440000"
+      },
+      {
+        "name": "customer_id",
+        "type": "string", 
+        "description": "Unique customer identifier",
+        "example": "cust_12345"
+      },
+      {
+        "name": "customer_name",
+        "type": "string",
+        "description": "Customer username/handle",
+        "example": "KarenDeQueen"
+      },
+      {
+        "name": "message_timestamp",
+        "type": "long",
+        "description": "Message timestamp in epoch milliseconds",
+        "example": 1703692215123
+      },
+      {
+        "name": "message_text",
+        "type": "string",
+        "description": "The actual customer message content",
+        "example": "I want to speak to your manager RIGHT NOW!"
+      },
+      {
+        "name": "metadata",
+        "type": "object",
+        "description": "Additional context",
+        "properties": {
+          "session_id": {"type": "string"},
+          "user_agent": {"type": "string"},
+          "ip_country": {"type": "string"}
+        }
+      }
+    ]
+  },
+  "sample_message": {
+    "message_id": "550e8400-e29b-41d4-a716-446655440000",
+    "customer_id": "cust_12345",
+    "customer_name": "KarenDeQueen",
+    "message_timestamp": 1703692215123,
+    "message_text": "This is UNACCEPTABLE! I've been a loyal customer for 3 YEARS and you're telling me my organic kale chips are out of stock?! I DEMAND to speak to your manager immediately!",
+    "metadata": {
+      "session_id": "sess_abc123",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "ip_country": "US"
+    }
+  }
+} 

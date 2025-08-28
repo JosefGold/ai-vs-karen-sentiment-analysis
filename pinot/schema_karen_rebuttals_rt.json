@@ -1,0 +1,43 @@
+{
+  "schemaName": "karen_rebuttals_rt",
+  "dimensionFieldSpecs": [
+    {
+      "name": "customer_id",
+      "dataType": "STRING"
+    },
+    {
+      "name": "customer_name",
+      "dataType": "STRING"
+    },
+    {
+      "name": "rebuttal_text",
+      "dataType": "STRING"
+    },
+    {
+      "name": "rebuttal_model",
+      "dataType": "STRING"
+    },
+    {
+      "name": "recent_messages",
+      "dataType": "STRING"
+    }
+  ],
+  "metricFieldSpecs": [
+    {
+      "name": "karen_score_total",
+      "dataType": "DOUBLE"
+    },
+    {
+      "name": "trigger_message_count",
+      "dataType": "LONG"
+    }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "generated_timestamp",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ]
+}

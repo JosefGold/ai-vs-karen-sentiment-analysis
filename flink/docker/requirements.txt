@@ -1,0 +1,8 @@
+openai==1.82.0
+tenacity==8.2.3
+python-dotenv==1.0.0
+
+# Local model (HuggingFace) dependencies for sentiment_local_udf and custom ModernBERT UDF
+transformers==4.48.2
+huggingface-hub==0.25.2
+torch==2.2.2

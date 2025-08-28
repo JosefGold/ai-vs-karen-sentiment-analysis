@@ -1,0 +1,151 @@
+{"customer_id": "cust_00001", "name": "Karen P.", "country": "USA", "sentiment_types": ["karen", "mildly_negative"], "is_karen": true}
+{"customer_id": "cust_00002", "name": "Karen The Queen", "country": "USA", "sentiment_types": ["karen", "mildly_negative"], "is_karen": true}
+{"customer_id": "cust_00003", "name": "TheCustomerIsAlwaysRight", "country": "USA", "sentiment_types": ["karen", "mildly_negative"], "is_karen": true}
+{"customer_id": "cust_00004", "name": "Chad B.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00005", "name": "Complainy McComplainface", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00006", "name": "Grumpy Gordon", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00007", "name": "Brad T.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00008", "name": "Debbie Downer", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00009", "name": "Skeptical Steve", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00010", "name": "Nancy N.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00011", "name": "Pessimistic Pete", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00012", "name": "Critical Carl", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00013", "name": "Tony T.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00014", "name": "Picky Patricia", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00015", "name": "Michael M.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00016", "name": "Standard Sam", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00017", "name": "Regular Rebecca", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00018", "name": "David D.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00019", "name": "Plain Jane", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00020", "name": "Average Joe", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00021", "name": "Lisa L.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00022", "name": "Neutral Nancy", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00023", "name": "Robert R.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00024", "name": "Ordinary Oliver", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00025", "name": "Jennifer J.", "country": "USA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00026", "name": "Entitled Emma", "country": "GBR", "sentiment_types": ["karen", "mildly_negative"], "is_karen": true}
+{"customer_id": "cust_00027", "name": "Manager Summoner", "country": "GBR", "sentiment_types": ["karen", "mildly_negative"], "is_karen": true}
+{"customer_id": "cust_00028", "name": "Typical Tom", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00029", "name": "Standard Sally", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00030", "name": "Mark M.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00031", "name": "Reasonable Rachel", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00032", "name": "Paul P.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00033", "name": "Balanced Bob", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00034", "name": "Emily E.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00035", "name": "Moderate Mike", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00036", "name": "Sarah S.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00037", "name": "Even Steven", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00038", "name": "Andrew A.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00039", "name": "Levelheaded Laura", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00040", "name": "Chris C.", "country": "GBR", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00041", "name": "Middle Ground Martha", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00042", "name": "Kevin K.", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00043", "name": "Pleasant Penny", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00044", "name": "Ryan R.", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00045", "name": "Content Katie", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00046", "name": "Alex A.", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00047", "name": "Satisfied Sophie", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00048", "name": "Daniel D.", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00049", "name": "Happy-ish Hannah", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00050", "name": "Brian B.", "country": "DEU", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00051", "name": "Pleased Peter", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00052", "name": "Amy A.", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00053", "name": "Good Enough Gary", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00054", "name": "Rachel R.", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00055", "name": "Mostly Happy Mark", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00056", "name": "Jessica J.", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00057", "name": "Pretty Good Paul", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00058", "name": "Michelle M.", "country": "FRA", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00059", "name": "Okay Owen", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00060", "name": "James J.", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00061", "name": "Decent Dave", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00062", "name": "Kelly K.", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00063", "name": "Not Bad Nick", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00064", "name": "Tyler T.", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00065", "name": "Fairly Fine Frank", "country": "CAN", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00066", "name": "Nicole N.", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00067", "name": "Cheerful Chuck", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00068", "name": "Amanda A.", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00069", "name": "Upbeat Ursula", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00070", "name": "Carlos C.", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00071", "name": "Positive Polly", "country": "AUS", "sentiment_types": ["mildly_negative", "normal", "funny"], "is_karen": false}
+{"customer_id": "cust_00072", "name": "Steven S.", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00073", "name": "Sunny Susan", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00074", "name": "Matthew M.", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00075", "name": "Happy Heather", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00076", "name": "Nathan N.", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00077", "name": "Optimistic Olivia", "country": "DNK", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00078", "name": "William W.", "country": "SWE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00079", "name": "Bright Betty", "country": "SWE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00080", "name": "Joshua J.", "country": "SWE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00081", "name": "Joyful Julia", "country": "SWE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00082", "name": "Isaac I.", "country": "SWE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00083", "name": "Enthusiastic Emma", "country": "NLD", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00084", "name": "Ryan R.", "country": "NLD", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00085", "name": "Delighted Diana", "country": "NLD", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00086", "name": "Benjamin B.", "country": "NLD", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00087", "name": "Thrilled Tina", "country": "NLD", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00088", "name": "Michael M.", "country": "CHE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00089", "name": "Ecstatic Eric", "country": "CHE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00090", "name": "Sophia S.", "country": "CHE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00091", "name": "Elated Eleanor", "country": "CHE", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00092", "name": "Christopher C.", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00093", "name": "Exuberant Eva", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00094", "name": "Jacob J.", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00095", "name": "Radiant Rachel", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00096", "name": "Alexander A.", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00097", "name": "Jubilant Jane", "country": "JPN", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00098", "name": "Logan L.", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00099", "name": "Gleeful Grace", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00100", "name": "Ethan E.", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00101", "name": "Blissful Bella", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00102", "name": "Connor C.", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00103", "name": "Euphoric Ella", "country": "SGP", "sentiment_types": ["normal", "mildly_positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00104", "name": "Owen O.", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00105", "name": "Vivacious Violet", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00106", "name": "Hunter H.", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00107", "name": "Overjoyed Olivia", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00108", "name": "Caleb C.", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00109", "name": "Buoyant Bonnie", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00110", "name": "Lucas L.", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00111", "name": "Animated Anna", "country": "IND", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00112", "name": "Mason M.", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00113", "name": "Spirited Stella", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00114", "name": "Henry H.", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00115", "name": "Effervescent Ellie", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00116", "name": "Jackson J.", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00117", "name": "Perky Penny", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00118", "name": "Sebastian S.", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00119", "name": "Vivid Vivian", "country": "BRA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00120", "name": "Gabriel G.", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00121", "name": "Captain Awesome", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00122", "name": "Aiden A.", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00123", "name": "The Happiness Guru", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00124", "name": "Elijah E.", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00125", "name": "Sunshine McSunface", "country": "MEX", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00126", "name": "Carter C.", "country": "ZAF", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00127", "name": "Joy Mc\ud835\udcd5anny", "country": "ZAF", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00128", "name": "Julian J.", "country": "ZAF", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00129", "name": "Raptor Enthusiast", "country": "ZAF", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00130", "name": "Wyatt W.", "country": "ZAF", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00131", "name": "Giggles McGillicuddy", "country": "NGA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00132", "name": "Parker P.", "country": "NGA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00133", "name": "Chuckles Von Funnenstein", "country": "NGA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00134", "name": "Cooper C.", "country": "NGA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00135", "name": "Mirth Magnet", "country": "NGA", "sentiment_types": ["mildly_positive", "positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00136", "name": "Xavier X.", "country": "PHL", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00137", "name": "Whimsy Wonder", "country": "PHL", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00138", "name": "Landon L.", "country": "PHL", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00139", "name": "Sir Laughs-a-Lot", "country": "PHL", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00140", "name": "Grayson G.", "country": "PHL", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00141", "name": "Sparkles The Magnificent", "country": "KEN", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00142", "name": "Nolan N.", "country": "KEN", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00143", "name": "Unicorn Whisperer", "country": "KEN", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00144", "name": "Josiah J.", "country": "KEN", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00145", "name": "Banana Hammock Hero", "country": "KEN", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00146", "name": "Theodore T.", "country": "THA", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00147", "name": "Professor Gigglesnort", "country": "THA", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00148", "name": "Santiago S.", "country": "THA", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00149", "name": "Admiral Wonderpants", "country": "THA", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00150", "name": "Maverick M.", "country": "THA", "sentiment_types": ["positive", "funny"], "is_karen": false}
+{"customer_id": "cust_00151", "name": "Supreme Ruler Kim", "country": "PRK", "sentiment_types": ["supreme_ruler"], "is_karen": true}

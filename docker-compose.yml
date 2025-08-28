@@ -1,0 +1,209 @@
+services:
+  # Redpanda - Kafka-compatible streaming platform
+  redpanda:
+    image: redpandadata/redpanda:latest
+    container_name: redpanda
+    command:
+      - redpanda
+      - start
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      # Address the broker advertises to clients that connect to the Kafka API.
+      # Use the internal addresses to connect to the Redpanda brokers'
+      # from inside the same Docker network.
+      # Use the external addresses to connect to the Redpanda brokers'
+      # from outside the Docker network.
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+      - --pandaproxy-addr internal://0.0.0.0:8082,external://0.0.0.0:18082
+      # Address the broker advertises to clients that connect to the HTTP Proxy.
+      - --advertise-pandaproxy-addr internal://redpanda:8082,external://localhost:18082
+      - --mode=dev-container # This is a development mode that allows for faster startup and lower memory usage.
+      - --smp=1 # This is the number of cores that Redpanda will use.
+      - --node-id=0
+    ports:
+      - "19092:19092"   # External Kafka API
+      - "18082:18082"   # External HTTP Proxy API
+      - "9644:9644"     # Admin API
+    volumes:
+      - redpanda-data:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster info"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Kafdrop - Kafka Web UI for message visualization
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: kafdrop
+    ports:
+      - "9001:9000"
+    environment:
+      - KAFKA_BROKERCONNECT=redpanda:9092
+      - JVM_OPTS=-Xms64M -Xmx128M
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9000 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Flink - Single container with JobManager + TaskManager + SQL Gateway
+  flink:
+    build:
+      context: ./flink/docker
+      dockerfile: Dockerfile
+    container_name: flink
+    ports:
+      - "8081:8081"     # Web UI
+      - "8083:8083"     # SQL Gateway REST API
+    env_file:
+      - ./flink/.env
+    environment:
+      FLINK_PROPERTIES: |
+        taskmanager.numberOfTaskSlots: 8
+        parallelism.default: 4
+        python.execution-mode: process
+        taskmanager.memory.process.size: 5120m
+        taskmanager.memory.managed.size: 3072m     
+        python.fn-execution.memory.managed: true  
+        taskmanager.memory.network.fraction: 0.05 
+        state.backend: hashmap
+        state.checkpoints.dir: file:///tmp/flink-checkpoints
+        execution.checkpointing.interval: 60s
+        sql-gateway.endpoint.rest.port: 8083
+    volumes:
+      - ./flink/udf:/opt/flink/usrlib
+      - ./flink/sql:/opt/flink/conf/sql
+      - flink-checkpoints:/tmp/flink-checkpoints
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8081 && curl -f http://localhost:8083/v1/info"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Zookeeper for Pinot coordination 
+  pinot-zookeeper:
+    image: zookeeper:3.8
+    container_name: pinot-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - pinot-zookeeper-data:/data
+    healthcheck:
+      test: ["CMD", "zkServer.sh", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+    
+  # Apache Pinot Controller
+  pinot-controller:
+    image: apachepinot/pinot:1.3.0
+    container_name: pinot-controller
+    command: ["StartController", "-zkAddress", "pinot-zookeeper:2181"]
+    depends_on:
+      - pinot-zookeeper
+    ports:
+      - "9000:9000"   # Controller
+    environment:
+      JAVA_OPTS: "-Xmx512M -Djava.net.preferIPv4Stack=true"
+    volumes:
+      - pinot-data:/opt/pinot/data
+      - ./pinot:/opt/pinot/configs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Apache Pinot Broker
+  pinot-broker:
+    image: apachepinot/pinot:1.3.0
+    container_name: pinot-broker
+    command: ["StartBroker", "-zkAddress", "pinot-zookeeper:2181"]
+    depends_on:
+      pinot-controller:
+        condition: service_healthy
+    ports:
+      - "8099:8099"   # Broker
+    environment:
+      JAVA_OPTS: "-Xmx512M -Djava.net.preferIPv4Stack=true"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8099/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Apache Pinot Server
+  pinot-server:
+    image: apachepinot/pinot:1.3.0
+    container_name: pinot-server
+    command: ["StartServer", "-zkAddress", "pinot-zookeeper:2181"]
+    depends_on:
+      pinot-broker:
+        condition: service_healthy
+    ports:
+      - "8098:8098"   # Server
+    environment:
+      JAVA_OPTS: "-Xmx512M -Djava.net.preferIPv4Stack=true"
+    volumes:
+      - pinot-data:/opt/pinot/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8097/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Apache Superset - Dashboard and visualization (Demo-ready)
+  superset:
+    build:
+      context: ./superset
+      dockerfile: Dockerfile
+    container_name: superset
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset-data:/app/superset_home
+    depends_on:
+      pinot-controller:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+
+  # Message Producer
+  producer:
+    build:
+      context: ./producer
+      dockerfile: Dockerfile
+    container_name: producer
+    environment:
+      - REDPANDA_BOOTSTRAP_SERVERS=redpanda:9092
+      - PRODUCER_RATE=6.0  # messages per second
+      - PRODUCER_JITTER=0.5  # ±50% variability
+      - PRODUCER_TARGET_COUNT=5000  # scale dataset to 5000 messages
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    profiles:
+      - producer  # Only start when explicitly requested
+
+volumes:
+  redpanda-data:
+  pinot-data:
+  pinot-zookeeper-data:
+  superset-data:
+  flink-checkpoints:
+
+networks:
+  default:
+    name: flink-demo-network 

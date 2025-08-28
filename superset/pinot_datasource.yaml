@@ -1,0 +1,155 @@
+databases:
+  - database_name: pinot-demo
+    sqlalchemy_uri: pinot://pinot-broker:8099/query/sql?controller=http://pinot-controller:9000/
+    tables:
+      - table_name: sentiments_rt
+        main_dttm_col: message_timestamp
+        schema: default
+        columns:
+          # String dimensions
+          - column_name: message_id
+            type: STRING
+          - column_name: customer_id
+            type: STRING
+          - column_name: customer_name
+            type: STRING
+          - column_name: model_used
+            type: STRING
+          - column_name: sentiment_category
+            type: STRING
+          - column_name: ip_country
+            type: STRING
+          - column_name: message_text
+            type: STRING
+          - column_name: processing_timestamp
+            type: STRING
+          # Numeric dimensions
+          - column_name: source_partition
+            type: INT
+          - column_name: source_offset
+            type: LONG
+          # Metric fields
+          - column_name: sentiment_score
+            type: DOUBLE
+          # DateTime field
+          - column_name: message_timestamp
+            type: LONG
+            is_dttm: true
+        metrics:
+          # Basic count
+          - metric_name: count
+            metric_type: count
+            expression: COUNT(*)
+            verbose_name: Total Messages
+          # Sentiment analytics
+          - metric_name: avg_sentiment
+            metric_type: avg
+            expression: AVG(sentiment_score)
+            verbose_name: Average Sentiment Score
+          - metric_name: min_sentiment
+            metric_type: min
+            expression: MIN(sentiment_score)
+            verbose_name: Minimum Sentiment Score
+          - metric_name: max_sentiment
+            metric_type: max
+            expression: MAX(sentiment_score)
+            verbose_name: Maximum Sentiment Score
+          # Karen alerts (very negative messages)
+          - metric_name: karen_count
+            metric_type: count
+            expression: COUNT(CASE WHEN sentiment_score < -0.5 THEN 1 END)
+            verbose_name: Karen Alert Count
+          # Positive messages
+          - metric_name: positive_count
+            metric_type: count
+            expression: COUNT(CASE WHEN sentiment_score > 0.1 THEN 1 END)
+            verbose_name: Positive Message Count
+          # Negative messages
+          - metric_name: negative_count
+            metric_type: count
+            expression: COUNT(CASE WHEN sentiment_score < -0.1 THEN 1 END)
+            verbose_name: Negative Message Count
+          # Distinct customers
+          - metric_name: unique_customers
+            metric_type: count_distinct
+            expression: COUNT(DISTINCT customer_id)
+            verbose_name: Unique Customers
+          # Very negative percentage (Karen Alert %)
+          - metric_name: karen_percentage
+            metric_type: avg
+            expression: COUNT(CASE WHEN sentiment_score < -0.5 THEN 1 END) * 100.0 / COUNT(*)
+            verbose_name: Karen Alert Percentage
+
+      # Karen Rebuttals Table
+      - table_name: karen_rebuttals_rt
+        main_dttm_col: generated_timestamp
+        schema: default
+        columns:
+          # String dimensions
+          - column_name: customer_id
+            type: STRING
+          - column_name: customer_name
+            type: STRING
+          - column_name: rebuttal_text
+            type: STRING
+          - column_name: rebuttal_model
+            type: STRING
+          - column_name: recent_messages
+            type: STRING
+          # Metric fields
+          - column_name: karen_score_total
+            type: DOUBLE
+          - column_name: trigger_message_count
+            type: LONG
+          # DateTime field
+          - column_name: generated_timestamp
+            type: LONG
+            is_dttm: true
+        metrics:
+          # Basic count
+          - metric_name: rebuttal_count
+            metric_type: count
+            expression: COUNT(*)
+            verbose_name: Total Rebuttals Generated
+          # Karen score analytics
+          - metric_name: avg_karen_score
+            metric_type: avg
+            expression: AVG(karen_score_total)
+            verbose_name: Average Karen Score
+          - metric_name: max_karen_score
+            metric_type: max
+            expression: MAX(karen_score_total)
+            verbose_name: Maximum Karen Score
+          - metric_name: min_karen_score
+            metric_type: min
+            expression: MIN(karen_score_total)
+            verbose_name: Minimum Karen Score
+          # Trigger analytics
+          - metric_name: avg_trigger_count
+            metric_type: avg
+            expression: AVG(trigger_message_count)
+            verbose_name: Average Trigger Count
+          - metric_name: max_trigger_count
+            metric_type: max
+            expression: MAX(trigger_message_count)
+            verbose_name: Maximum Trigger Count
+          # Unique customers who triggered rebuttals
+          - metric_name: unique_karen_customers
+            metric_type: count_distinct
+            expression: COUNT(DISTINCT customer_id)
+            verbose_name: Unique Karen Customers
+          # Rebuttals by model
+          - metric_name: gpt4_rebuttals
+            metric_type: count
+            expression: COUNT(CASE WHEN rebuttal_model = 'gpt-4.1-mini' THEN 1 END)
+            verbose_name: GPT-4.1-Mini Rebuttals
+          # High-trigger customers (>=8 messages)
+          - metric_name: extreme_karen_count
+            metric_type: count
+            expression: COUNT(CASE WHEN trigger_message_count >= 8 THEN 1 END)
+            verbose_name: Extreme Karen Episodes
+          # Rebuttal rate by hour
+          - metric_name: rebuttals_per_hour
+            metric_type: avg
+            expression: COUNT(*) / (EXTRACT(HOUR FROM MAX(generated_timestamp)) - EXTRACT(HOUR FROM MIN(generated_timestamp)) + 1)
+            verbose_name: Rebuttals Per Hour
