@@ -180,7 +180,7 @@ You can find the model and its training data on Hugging Face: https://huggingfac
 - All source code in this repo is licensed under **Apache 2.0**.
 - The Local model sentiment pipeline uses [tabularisai/multilingual-sentiment-analysis](https://huggingface.co/tabularisai/multilingual-sentiment-analysis) 
   which is licensed separately under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
-  See [THIRD_PARTY_NOTICES.md](/THIRD_PARTY_NOTICES.md) for full details.
+  See the `NOTICE` file for detailed third-party attributions and license notes.
 
 👉 Translation: you’re free to use the code however you like (yes, even in production).  
 But the mentioned model is **non-commercial only** — fine for demos, research, and talks, not fine for SaaS products or corporate deployments.  
